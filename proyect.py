@@ -209,7 +209,7 @@ class App:
             Logger.log(str(e))
             messagebox.showerror("Error", str(e))
 
-def crear_reserva(self):
+    def crear_reserva(self):
         try:
             if not self.sistema.clientes:
                 raise ReservaError("No hay clientes")
@@ -247,7 +247,7 @@ def crear_reserva(self):
 
 
 # ================== MAIN ==================
-if _name_ == "_main_":
+if __name__ == "__main__":
     root = tk.Tk()
     app = App(root)
     root.mainloop()
